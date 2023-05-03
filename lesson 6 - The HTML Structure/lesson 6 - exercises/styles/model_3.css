@@ -1,0 +1,13 @@
+.title{
+  color:black;
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 9px;
+}
+.text{
+  color: black;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
