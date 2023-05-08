@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Nasted Layouts</title>
+    <style>
+      .about-me{
+        display: inline-block;
+        margin-left: 20px;
+        padding-bottom: 10px;
+        padding-top: none;
+        box-shadow: 0 0 10px grey;
+        display: inline-block;
+        vertical-align: center;
+      }
+      .photo{
+        object-fit: cover;
+        width: 150px;
+        height: 150px;
+      }
+      .name {
+        font-family: Arial;
+        font-size: 15px;
+        font-weight: bold;
+        margin-top: 5px;
+        margin-bottom: 3px;
+      }
+      .description{
+        font-family: Arial;
+        font-size: 12px;
+        margin-top: 5px;
+        color: grey;
+        margin-left: 7px;
+        display: inline-block;
+      }
+      .add-friend{
+        background-color: rgb(58, 137, 255);
+        border: none;
+        color: white;
+        border-radius: 3px;
+        padding-top: 7px;
+        padding-bottom: 7px;
+        padding-left: 12px;
+        padding-right: 12px;
+        display: block;
+      }
+      .profile-pic{
+        display: inline-block;
+        object-fit: cover;
+        width: 30px;
+        height: 30px;
+        border-radius: 50px;
+        vertical-align: center;
+      }
+       .profile-img{
+        display: inline-block;
+        vertical-align: bottom;
+      }
+      .profile-friends{
+        display: inline-block;
+        vertical-align: center;
+      }
+      .profile-img, .profile-friends{
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+      .info{
+        margin-left: 7px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="about-me">
+        <div>
+          <img class="photo" src="kitty.jpg">
+        </div>
+        <div class="info">
+          <p class="name">Afrodita</p>
+              <div class="profile-img" >
+                <img class="profile-pic" src="profile-picture.jpg">
+              </div>
+              <div class="profile-friends">
+                <p class="description">2 mutual friends</p>
+              </div>
+          <button class="add-friend">Add Friend</button>
+        </div>
+    </div>
+
+    <body>
+      <div class="about-me">
+          <div>
+            <img class="photo" src="hamseter.jpg">
+          </div>
+          <div class="info">
+            <p class="name">Rex</p>
+                <div class="profile-img" >
+                  <img class="profile-pic" src="profile-picture.jpg">
+                </div>
+                <div class="profile-friends">
+                  <p class="description">3 mutual friends</p>
+                </div>
+            <button class="add-friend">Add Friend</button>
+          </div>
+        </div>
+
+        <body>
+          <div class="about-me">
+              <div>
+                <img class="photo" src="singer-cat.jpg">
+              </div>
+              <div class="info">
+                <p class="name">Winona</p>
+                    <div class="profile-img" >
+                      <img class="profile-pic" src="profile-picture.jpg">
+                    </div>
+                    <div class="profile-friends">
+                      <p class="description">5 mutual friends</p>
+                    </div>
+                <button class="add-friend">Add Friend</button>
+              </div>
+            </div>
+  </body>
+</html>
