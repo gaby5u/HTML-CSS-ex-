@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>flexbox practice exercises</title>
+    <style>
+      .main{
+        width: 300px;
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(209, 209, 209);
+        border-radius: 4px;
+        margin-bottom: 30px;
+      }
+      .flexbox{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 12px;
+        padding-right: 12px;
+        padding-top: 6px;
+        padding-bottom: 6px;
+      }
+      .notification{
+        color: white;
+        font-weight: bold;
+        background-color: rgb(58, 124, 211);
+        border: none;
+        border-radius: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        font-size: 14px;
+      }
+
+      .flexbox-heading{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        background-color: rgb(118, 72, 150);
+        padding-left: 15px;
+        padding-right: 15px;
+        color: white;
+        margin-bottom: 30px;
+      }
+      .Logo{
+        font-size: 20px;
+        font-family: arial;
+        font-weight: bold;
+      }
+      .search-bar{
+        width: 500px;
+        border: none;
+        margin-top: 12px;
+        margin-bottom: 12px;
+        height: 30px;
+        border-radius: 15px;
+        padding-left: 20px;
+      }
+      .download{
+        background-color: rgb(118, 72, 150);
+        font-size: 16px;
+        color: white;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        border-radius: 2px;
+        border-style: solid;
+        border-width: 1px;
+        border-color: white;
+      }
+
+
+      .flexbox1{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      .profile-picture{
+        object-fit: cover;
+        width: 70px;
+        height: 70px;
+        border-radius: 35px;
+        margin-right: 15px;
+      }
+      .name{
+        font-weight: bold;
+        font-family: arial;
+        margin-bottom: 3px;
+        margin-top: 0;
+      }
+      .description{
+        font-family: arial;
+        color: grey;
+        margin-top: 0;
+        margin-bottom: 5px;
+      }
+      .Pupularity{
+        font-family: arial;
+        color: grey;
+        font-size: 14px;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+      .info{
+        width: 200px;
+      }
+      .follow-button{
+        color: white;
+        background-color: rgb(53, 126, 194);
+        font-weight: bold;
+        border: none;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-radius: 4px;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="flexbox">
+        <div>Home</div>
+        <div class="notification">14</div>
+      </div>
+
+      <div class="flexbox">
+        <div>Notifications</div>
+        <div class="notification">3</div>
+      </div>
+
+      <div class="flexbox">
+        <div>Messages</div>
+        <div class="notification">5</div>
+      </div>
+    </div>
+
+
+      <div class="flexbox-heading">
+        <div class="Logo">Home</div>
+        <input class="search-bar" type="text" placeholder="Search">
+        <button class="download">Download</button>
+      </div>
+
+
+
+        <div class="flexbox1">
+          <img class="profile-picture" src="kitty.jpg">
+          <div class="info">
+          <p class="name">Oliver</p>
+          <p class="description">Need your love</p>
+          <p class="Pupularity">Popular</p>
+          </div>
+          <button class="follow-button">Follow</button>
+        </div>
+
+        <div class="flexbox1">
+          <img class="profile-picture" src="hamseter.jpg">
+          <div class="info">
+          <p class="name">Rex</p>
+          <p class="description">Cool guy</p>
+          <p class="Pupularity">Popular</p>
+          </div>
+          <button class="follow-button">Follow</button>
+        </div>
+
+        <div class="flexbox1">
+          <img class="profile-picture" src="smily_kitty.jpg">
+          <div class="info">
+          <p class="name">Mimi</p>
+          <p class="description">Single</p>
+          <p class="Pupularity">Popular</p>
+          </div>
+          <button class="follow-button">Follow</button>
+        </div>
+  </body>
+</html>
