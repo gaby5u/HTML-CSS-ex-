@@ -1,54 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>Slider-bg-image-auto-change</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <section class="home-page">
-    <header class="main-header box-container">
-      <nav class="main-nav">
-        <div class="logo">
-          <img src="img/logo.png" alt="Logo">
-        </div>
-        <ul class="nav-links">
-          <li>
-            <a href="" class="main-nav-link">Bibliografie</a>
-          </li>
-          <li>
-            <a href="" class="main-nav-link">Galerie</a>
-          </li>
-          <li>
-            <a href="" class="main-nav-link">Proiecte</a>
-          </li>
-          <li>
-            <a href="" class="main-nav-link">Aprecieri</a>
-          </li>
-          <li>
-            <a href="" class="main-nav-link">Contact</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+  <head>
+    <title>Slider-bg-image-auto-change</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="queries.css" />
 
-    <section class="main-content">
-      <h2>Explorează lumea artei cu</h2>
-      <h1>Alex Katz</h1>
-      <div class="cta-buttons">
-        <button>Citeste mai mult</button>
-        <button>Vezi galeria</button>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <section class="home-page">
+      <header class="main-header box-container">
+        <nav class="main-nav">
+          <img src="img/logo.png" alt="Logo" />
+          <div class="menu-toggle" onclick="toggleMenu()"></div>
+          <ul class="nav-links">
+            <li>
+              <a href="" class="main-nav-link">Bibliografie</a>
+            </li>
+            <li>
+              <a href="" class="main-nav-link">Galerie</a>
+            </li>
+            <li>
+              <a href="" class="main-nav-link">Proiecte</a>
+            </li>
+            <li>
+              <a href="" class="main-nav-link">Aprecieri</a>
+            </li>
+            <li>
+              <a href="" class="main-nav-link">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <section class="main-content">
+        <h2>Explorează lumea artei cu</h2>
+        <h1>Alex Katz</h1>
+        <div class="cta-buttons">
+          <button>Citeste mai mult</button>
+          <button>Vezi galeria</button>
+        </div>
+      </section>
+
+      <div class="dots">
+        <span class="dot" onclick="changeSlideUsingDots(1)"></span>
+        <span class="dot" onclick="changeSlideUsingDots(2)"></span>
+        <span class="dot" onclick="changeSlideUsingDots(3)"></span>
+        <span class="dot" onclick="changeSlideUsingDots(4)"></span>
+        <span class="dot" onclick="changeSlideUsingDots(5)"></span>
       </div>
     </section>
 
-    <div class="dots">
-      <span class="dot" onclick="changeSlideUsingDots(1)"></span>
-      <span class="dot" onclick="changeSlideUsingDots(2)"></span>
-      <span class="dot" onclick="changeSlideUsingDots(3)"></span>
-      <span class="dot" onclick="changeSlideUsingDots(4)"></span>
-      <span class="dot" onclick="changeSlideUsingDots(5)"></span>
+    <!-- <section>
+    <div class="paint-stain-main-text-article">
+      <img src="img/paint-stain.png" alt="Paint Stain">
+      <h1>Artistul Alex Katz nu încetineste la 88 de ani</h1>
     </div>
-  </section>
+    <div class="portret-alex-main-paragraph box-container">
+      <img class="photo-portrait-alex" src="img/portret-alex.png" alt="Alex Katz">
+      <div class="mini-about-alex">
+        <p>
+          Cu planuri plate de culori bogate si minunate, peisajele si portretele lui 
+          Alex Katz evocă estetica netedă a panourilor publicitare si a filmului
+        </p>
+      </div>
+      <div class="meet-alex-video">
+        <video src="video/meet-alex-video.mp4"  poster="img/meet-alex-video-image.png"></video>
+      </div>
+      <p>Pictorul figurativ american Alex Katz a dezvoltat un 
+        stil artistic care este imediat recunoscut. Fie că îi 
+        vezi lucrarea de peste un târg de artă, printr-o fereastră 
+        de galerie sau pe pagina unei cărți, poți spune: acesta 
+        este un Katz. Planurile sale plate de culoare și contururile 
+        clare amintesc de reclamele de la mijlocul secolului, 
+        iar refuzul perspectivei punctuale tradiționale creează 
+        o experiență optică singulară.
+      </p>
+    </div>
+    <div class="button-signature">
+      <button>Citeste mai mult</button>
+      <img src="img/signature.png" alt="Artist-signature">
+    </div>
+  </section> -->
 
-  <script src="script.js"></script>
-</body>
+    <section class="white-section">
+      <h2>Cronologie</h2>
+      <div class="brown-section">
+        <div id="modal" class="modal">
+          <div class="modal-content">
+            <div>
+              <span class="close-modal" onclick="closeModal()">&#x2715;</span>
+            </div>
+            <h3 class="year"></h3>
+            <p class="text"></p>
+            <img src="img/brush-modal.png" alt="Brush" />
+          </div>
+        </div>
+
+        <div class="box-container">
+          <div class="wrapper">
+            <i id="left-arrow"></i>
+            <div class="carousel">
+              <p onclick="createModule(1954)">1954</p>
+              <p onclick="createModule(1968)">1968</p>
+              <p onclick="createModule(1974)">1974</p>
+              <p onclick="createModule(1986)">1986</p>
+              <p onclick="createModule(1996)">1996</p>
+              <p onclick="createModule(2000)">2000</p>
+              <p onclick="createModule(2003)">2003</p>
+              <p onclick="createModule(2006)">2006</p>
+              <p onclick="createModule(2009)">2009</p>
+              <p onclick="createModule(2012)">2012</p>
+              <p onclick="createModule(2015)">2015</p>
+              <p onclick="createModule(2018)">2018</p>
+              <p onclick="createModule(2021)">2021</p>
+              <p onclick="createModule(2022)">2022</p>
+              <p onclick="createModule(2023)">2023</p>
+            </div>
+            <i id="right-arrow"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="artist-photo-carousel white-section">
+      <div class="image-container">
+        <img
+          src="img/carousel-img-1.png"
+          class="inactive-image"
+          onclick="toggleImage(1)"
+          alt="Image 1"
+        />
+        <img
+          src="img/carousel-img-2.png"
+          class="active-image"
+          onclick="toggleImage(2)"
+          alt="Image 2"
+        />
+        <img
+          src="img/carousel-img-3.png"
+          class="inactive-image"
+          onclick="toggleImage(3)"
+          alt="Image 3"
+        />
+        <img
+          src="img/carousel-img-4.png"
+          class="inactive-image"
+          onclick="toggleImage(4)"
+          alt="Image 4"
+        />
+      </div>
+
+      <div class="dots-artist-carousel">
+        <span class="dot-artist-carousel" onclick="toggleImage(1)"></span>
+        <span
+          class="dot-artist-carousel active-dot-artist-carousel"
+          onclick="toggleImage(2)"
+        ></span>
+        <span class="dot-artist-carousel" onclick="toggleImage(3)"></span>
+        <span class="dot-artist-carousel" onclick="toggleImage(4)"></span>
+      </div>
+    </section>
+
+    <button class="orange-button">Click</button>
+
+    <a href="biografie/">
+      <button class="border-button">Citeste mai mult</button>
+    </a>
+
+    <a href="https://en.wikipedia.org/wiki/Alex_Katz#Artistic_style">
+      <button class="underline-fill-button">Află mai multe</button>
+    </a>
+
+    <script src="script.js"></script>
+  </body>
 </html>
